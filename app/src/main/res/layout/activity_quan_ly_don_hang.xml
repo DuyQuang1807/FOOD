@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.User.QuanLyDonHangActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/viewParent.headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2.7dp"
+            android:text="@string/qldh"
+            android:textColor="@color/cam"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/backqldh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:src="@drawable/ic_arrow_back_black1_24dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/txtHistory"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/icons8_order_history_30px"
+            android:text="Lịch Sử Đơn Hàng" />
+        <TextView
+            android:id="@+id/txtDonHang"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/icon_cart"
+            android:text="Giỏ Hàng" />
+        <TextView
+            android:id="@+id/txtGioHang"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/shoppingbag"
+            android:text="Đặt Hàng" />
+
+        <TextView
+            android:id="@+id/txtTrangThaiDonHang"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/moneytransfer"
+            android:text="Trạng Thái Đơn Hàng" />
+
+        <TextView
+            android:id="@+id/txtQRCode"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/qrcode1"
+            android:text="QR Code" />
+
+    </LinearLayout>
+
+</LinearLayout>

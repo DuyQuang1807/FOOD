@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThanhToanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/billabong" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/card_view"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinregular"
+                    android:gravity="center"
+                    android:text="Giao tới"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/mapgoogledrawble"
+                    android:text="Địa Chỉ" />
+
+                <TextView
+                    android:id="@+id/txtaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center"
+                    android:text="32A Hoàng Ngọc Phách"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinregular"
+                    android:gravity="center"
+                    android:text="Tóm tắt đơn hàng"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvcart"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppinregular"
+                    android:text="Phương thức thanh toán"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/rdbGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <RadioButton
+                    android:id="@+id/rdbTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Tiền mặt"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="13dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/money1"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/rdbNganHang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Ngân Hàng"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="40dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bank1"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingLeft="10dp"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="300dp"
+                android:id="@+id/txtPayment"
+                android:paddingLeft="20dp"
+                android:theme="@style/AppTheme"
+                android:paddingTop="10dp"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/boggocedt"
+                android:layout_height="wrap_content" android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        android:id="@+id/card_view"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/linear1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng cộng"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/txttientong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="54,000VNĐ"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/robotobold"
+                    android:layout_marginRight="20dp"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_insertcart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="sans-serif-black"
+                android:backgroundTint="@color/cam"
+                android:text="Đặt Hàng" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
